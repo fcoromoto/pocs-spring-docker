@@ -1,3 +1,7 @@
 *.iml
 .idea/
-HELP.md
+docker-compose.yml
+Dockerfile
+.mvn/
+mvnw.cmd
+mvnw
