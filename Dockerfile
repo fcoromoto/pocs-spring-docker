@@ -5,9 +5,13 @@ WORKDIR /app
 COPY src src/
 COPY pom.xml .
 
+# mvn clean install ( e criando o cache para .m2 )
 RUN --mount=type=cache,target=/root/.m2 \
 	mvn clean package -DskipTests && \
     cp target/*.jar target/app.jar
+
+# mvn clean install ( sem cache para .m2 )
+#RUN mvn clean package -DskipTests &&  cp target/*.jar target/app.jar
 
 FROM openjdk:11.0.12-jre-slim
 
