@@ -9,6 +9,8 @@ services:
       dockerfile: Dockerfile
     ports:
       - 8080:8080
+      - 7777:7777
+    command: [ "java", "-jar", "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:7777" ,"app.jar"]
     deploy:
       resources:
         limits:
