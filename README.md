@@ -1,6 +1,6 @@
 # POC SPRING DOCKER
 
-Poc com o objetivo de aplicar o desenvolvimento ( em java | spring )  
+Poc com o objetivo de aplicar o desenvolvimento ( em java | spring )
 utilizando docker.
 
 
